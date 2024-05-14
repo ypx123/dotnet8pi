@@ -1,13 +1,5 @@
-# Dot Net 6 with the Raspberry Pi
-
-This is the source code to accompany my talk on Microsoft .NET 6 with the Raspberry Pi.
-
-Talk details, slides and a blog are incoming!
-
-Tested on a Raspberry Pi 3B+ / Raspberry Pi Zero 2W and a Raspberry Pi 4
-
-Any Queries, contact me at;
-
+# Dot Net 8 with the Raspberry Pi
+Forked version of PeteCodes code to install Net 8.0 instead of Net 6.0
 https://www.petecodes.co.uk/contact/
 
 Pete Gallagher / Pete Codes / PJG Creations 2021
@@ -20,15 +12,15 @@ You can read the accompanying blog post for this repository here;
 
 # .NET 6 Installation on a Raspberry Pi
 
-You can install Dot Net 6 on the Raspberry Pi in one command by executing;
+You can install Dot Net 8 on the Raspberry Pi in one command by executing;
 
 ```
-wget -O - https://raw.githubusercontent.com/pjgpetecodes/dotnet6pi/master/install.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/ypx123/dotnet8pi/master/install.sh | sudo bash
 ```
 
 # Local Install Script
 
-If you've cloned this repo, you can install Dot Net 6 by running the following in the root of the repo;
+If you've cloned this repo, you can install Dot Net 8 by running the following in the root of the repo;
 
 ```
 sudo chmod +x install.sh
@@ -40,7 +32,7 @@ sudo ./install.sh
 
 Download the latest version of the .NET framework for your system from here;
 
-https://dotnet.microsoft.com/download/dotnet/6.0
+https://dotnet.microsoft.com/download/dotnet/8.0
 
 # Remote Deployment and Debugging
 
