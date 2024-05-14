@@ -1,12 +1,14 @@
 #!/bin/bash
 
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m          .NET 6 Installer"
+echo -e "\e[1m          .NET 8 Installer"
 echo -e "\e[1m----------------------------------------"
 echo ""
 echo -e "\e[1mPete Codes / PJG Creations 2024"
 echo ""
 echo -e "Latest update 02/01/2024"
+echo ""
+echo -e "Modded by YPx on 14/05/2024"
 echo ""
 
 echo -e "\e[0m"
@@ -24,7 +26,7 @@ echo -e "\e[1m     Fetching Latest .NET Versions"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-dotnetver=6.0
+dotnetver=8.0
 
 #
 # We can add this back in when this release becomes recommended
