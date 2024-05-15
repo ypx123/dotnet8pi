@@ -11,6 +11,15 @@ echo ""
 echo -e "Modded by YPx on 14/05/2024"
 echo ""
 
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m          Call apt update upgrade"
+echo -e "\e[1m----------------------------------------"
+echo ""
+
+sudo apt update
+sudo apt upgrade -y
+
+
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m Installing .NET for the following user"
@@ -27,6 +36,7 @@ echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 dotnetver=8.0
+
 
 #
 # We can add this back in when this release becomes recommended
@@ -197,7 +207,7 @@ echo -e "\e[0m"
 
 cd ~
 
-wget -O /home/$username/dotnetdebug.sh https://raw.githubusercontent.com/pjgpetecodes/dotnet6pi/master/dotnetdebug.sh
+wget -O /home/$username/dotnetdebug.sh https://raw.githubusercontent.com/ypx123/dotnet8pi/master/dotnetdebug.sh
 chmod +x /home/$username/dotnetdebug.sh 
 
 echo -e "\e[0m"
@@ -210,15 +220,12 @@ dotnet --info
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m          Installing vsCode "
+echo -e "\e[1m          Installing vsDebugger "
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 cd ~
-
-sudo apt update
-sudo apt upgrade -y
-sudo apt install code
+curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -r linux-arm -v latest -l ~/vsdbg
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
