@@ -68,7 +68,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-ssh pi@%pihostname% -oStrictHostKeyChecking=no "mkdir -p ~/.ssh"
+ssh ypx@%pihostname% -oStrictHostKeyChecking=no "mkdir -p ~/.ssh"
 
 echo(
 echo "--------------------------------------------------------------"
@@ -80,7 +80,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-type c:\SSHkey\%username%\.ssh\id_rsa.pub | ssh -oStrictHostKeyChecking=no pi@%pihostname% "cat >> ~/.ssh/authorized_keys"
+type c:\SSHkey\%username%\.ssh\id_rsa.pub | ssh -oStrictHostKeyChecking=no ypx@%pihostname% "cat >> ~/.ssh/authorized_keys"
 
 
 echo(
@@ -139,7 +139,7 @@ echo             "type": "coreclr", >> launch.json
 echo             "request": "launch", >> launch.json
 echo             "preLaunchTask": "build", >> launch.json
 echo             // If you have changed target frameworks, make sure to update the program path. >> launch.json
-echo             "program": "${workspaceFolder}/bin/Debug/net5.0/${workspaceFolderBasename}.dll", >> launch.json
+echo             "program": "${workspaceFolder}/bin/Debug/net8.0/${workspaceFolderBasename}.dll", >> launch.json
 echo             "args": [], >> launch.json
 echo             "cwd": "${workspaceFolder}", >> launch.json
 echo             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console >> launch.json
@@ -158,17 +158,17 @@ echo                 "type": "coreclr", >> launch.json
 echo                 "request": "launch", >> launch.json
 echo                 "preLaunchTask": "RaspberryPiDeploy", >> launch.json
 echo                 "program": "dotnet", >> launch.json
-echo                 "args": ["/home/pi/${workspaceFolderBasename}/${workspaceFolderBasename}.dll"], >> launch.json
-echo                 "cwd": "/home/pi/${workspaceFolderBasename}", >> launch.json
+echo                 "args": ["/home/ypx/${workspaceFolderBasename}/${workspaceFolderBasename}.dll"], >> launch.json
+echo                 "cwd": "/home/ypx/${workspaceFolderBasename}", >> launch.json
 echo                 "stopAtEntry": false, >> launch.json
 echo                 "console": "internalConsole", >> launch.json
 echo                 "pipeTransport": { >> launch.json
 echo                     "pipeCwd": "${workspaceFolder}", >> launch.json
 echo                     "pipeProgram": "ssh", >> launch.json
 echo                     "pipeArgs": [ >> launch.json
-echo                         "pi@%pihostname%" >> launch.json
+echo                         "ypx@%pihostname%" >> launch.json
 echo                     ], >> launch.json
-echo                     "debuggerPath": "/home/pi/vsdbg/vsdbg" >> launch.json
+echo                     "debuggerPath": "/home/ypx/vsdbg/vsdbg" >> launch.json
 echo                 } >> launch.json
 echo             } >> launch.json
 echo     ] >> launch.json
@@ -245,7 +245,7 @@ echo                     "reveal": "always", >> tasks.json
 echo                     "panel": "new" >> tasks.json
 echo                 }, >> tasks.json
 echo                 "windows": { >> tasks.json
-echo                     "command": "c:\\cwrsync\\rsync -rvuz --rsh=\"c:\\cwrsync\\ssh\" --chmod=700 bin/linux-arm/publish/ pi@%pihostname%%:/home/pi/${workspaceFolderBasename}/" >> tasks.json
+echo                     "command": "c:\\cwrsync\\rsync -rvuz --rsh=\"c:\\cwrsync\\ssh\" --chmod=700 bin/linux-arm/publish/ ypx@%pihostname%%:/home/ypx/${workspaceFolderBasename}/" >> tasks.json
 echo                 }, >> tasks.json
 echo                 "problemMatcher": [] >> tasks.json
 echo             } >> tasks.json
