@@ -82,15 +82,6 @@ echo(
 
 type c:\Users\%username%\.ssh\id_rsa.pub | ssh -oStrictHostKeyChecking=no pi@%pihostname% "cat >> ~/.ssh/authorized_keys"
 
-echo(
-echo "--------------------------------------------------------------"
-echo "|                                                            |"
-echo "|     Downloading Visual Studio Debugger on Raspberry Pi     |"
-echo "|                                                            |"
-echo "--------------------------------------------------------------"
-echo(
-
-ssh pi@%pihostname% "cd ~/ && curl -sSL https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l ~/vsdbg"
 
 echo(
 echo "--------------------------------------------------------------"
@@ -104,7 +95,7 @@ if not exist "c:\cwrsync\rsync.exe" (
 
     mkdir c:\home\%USERNAME%\.ssh
     cd c:\home
-    curl --output cwrsync.zip https://itefix.net/dl/free-software/cwrsync_6.2.7_x64_free.zip && tar -xf cwrsync.zip
+    curl --output cwrsync.zip https://itefix.net/dl/free-software/cwrsync_6.3.0_x64_free.zip && tar -xf cwrsync.zip
     rename bin cwrsync
     move cwrsync c:\
     copy %userprofile%\.ssh\* c:\home\%username%\.ssh
