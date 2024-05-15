@@ -29,7 +29,7 @@ https://dotnet.microsoft.com/download/dotnet/8.0
 If you'd like to be able to write code on your PC and then Deploy and Debug that code directly on a Raspberry Pi, then I've create a one line script to set that up;
 
 ```
-curl --output remotedebugsetup.bat https://raw.githubusercontent.com/pjgpetecodes/dotnet6pi/master/remotedebugsetup.bat && remotedebugsetup.bat
+curl --output remotedebugsetup.bat https://raw.githubusercontent.com/ypx123/dotnet8pi/master/remotedebugsetup.bat && remotedebugsetup.bat
 ```
 
 You can read more about this in a blog post here;
