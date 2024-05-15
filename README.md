@@ -10,22 +10,12 @@ You can read the accompanying blog post for this repository here;
 
 [Install and use .NET 6 with the Raspberry Pi](http://bit.ly/dotnet6pi)
 
-# .NET 6 Installation on a Raspberry Pi
+# .NET 8 Installation on a Raspberry Pi
 
 You can install Dot Net 8 on the Raspberry Pi in one command by executing;
 
 ```
 wget -O - https://raw.githubusercontent.com/ypx123/dotnet8pi/master/install.sh | sudo bash
-```
-
-# Local Install Script
-
-If you've cloned this repo, you can install Dot Net 8 by running the following in the root of the repo;
-
-```
-sudo chmod +x install.sh
-sudo ./install.sh 
-
 ```
 
 # PC Setup
@@ -46,22 +36,6 @@ You can read more about this in a blog post here;
 
 http://bit.ly/piremotedeployanddebug
 
-
-# Setup PC for Remote Deployment and Debugging an Uno Application
-
-If you'd like to be able to Create an Uno Platform Application on your PC and then Deploy and Debug that code directly on a Raspberry Pi, then I've create a one line script to set that up;
-
-```
-curl --output remotedebugsetup_uno.bat https://raw.githubusercontent.com/pjgpetecodes/dotnet6pi/master/remotedebugsetup_uno.bat && remotedebugsetup_uno.bat
-```
-
-You can read more about this in a blog post here;
-
-http://bit.ly/piremotedeployanddebuguno
-
-# IoT Hub Connection
-
-The 3 IoT Hub Based Examples will require an IoT Hub Device Primary Connection String to work. 
 
 # Deploying from VS Code on Windows
 
