@@ -210,6 +210,18 @@ dotnet --info
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m          Installing vsCode "
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[0m"
+
+cd ~
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt install code
+
+echo -e "\e[0m"
+echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m              ALL DONE!"
 echo ""
 echo -e "\e[1mNote: It's highly recommended that you perform a reboot at this point!"
@@ -218,7 +230,4 @@ echo -e "\e[0mGo ahead and run \e[1mdotnet new console \e[0min a new directory!"
 echo ""
 echo ""
 echo ""
-echo -e "\e[0mLet me know how you get on by tweeting me at \e[1;5m@pete_codes\e[0m"
-echo ""
-echo -e "\e[1m----------------------------------------"
-echo -e "\e[0m"
+
