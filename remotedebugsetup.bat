@@ -46,7 +46,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-if not exist c:\SSHkey\%username%\.ssh\id_rsa ssh-keygen -f "c:\\SSHkey\\%username%\\.ssh\\id_rsa" -t rsa -N ""
+if not exist c:\users\%username%\.ssh\id_rsa ssh-keygen -f "c:\\users\\%username%\\.ssh\\id_rsa" -t rsa -N ""
 
 echo(
 echo "--------------------------------------------------------------"
@@ -56,7 +56,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-ssh-keyscan -H %pihostname% >> c:\SSHkey\%username%\.ssh\known_hosts
+ssh-keyscan -H %pihostname% >> c:\users\%username%\.ssh\known_hosts
 
 echo(
 echo "--------------------------------------------------------------"
@@ -80,7 +80,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-type c:\SSHkey\%username%\.ssh\id_rsa.pub | ssh -oStrictHostKeyChecking=no ypx@%pihostname% "cat >> ~/.ssh/authorized_keys"
+type c:\users\%username%\.ssh\id_rsa.pub | ssh -oStrictHostKeyChecking=no ypx@%pihostname% "cat >> ~/.ssh/authorized_keys"
 
 
 echo(
@@ -93,14 +93,14 @@ echo(
 
 if not exist "c:\cwrsync\rsync.exe" (
 
-    mkdir c:\SSHkey\home\%USERNAME%\.ssh
-    cd c:\SSHkey\home
+    mkdir c:\users\home\%USERNAME%\.ssh
+    cd c:\users\home
     curl --output cwrsync.zip https://itefix.net/dl/free-software/cwrsync_6.3.0_x64_free.zip && tar -xf cwrsync.zip
     rename bin cwrsync
     move cwrsync c:\
-    copy %userprofile%\.ssh\* c:\SSHkey\home\%username%\.ssh
-    icacls c:\SSHkey\home /setowner %username% /R
-    icacls c:\SSHkey\home /inheritance:r /grant:r "%username%:(OI)(CI)F" /T
+    copy %userprofile%\.ssh\* c:\users\home\%username%\.ssh
+    icacls c:\users\home /setowner %username% /R
+    icacls c:\users\home /inheritance:r /grant:r "%username%:(OI)(CI)F" /T
 )
 
 echo(
